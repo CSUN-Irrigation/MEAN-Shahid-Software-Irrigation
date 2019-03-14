@@ -8,6 +8,7 @@ TO RUN THIS APPLICATION:
 Requirements:
 
 A .envrc file with the following variables:
+```
 export OKTA_ORG_URL=
 export OKTA_TOKEN=
 export OKTA_CLIENT_ID=
@@ -15,6 +16,7 @@ export OKTA_CLIENT_SECRET=
 export SECRET=
 export OKTA_APPBASEURL=
 export OKTA_CALLBACK_URI= Please note: the above variables must be properly set (have the correct values)
+```
 
 First time setup:
 
