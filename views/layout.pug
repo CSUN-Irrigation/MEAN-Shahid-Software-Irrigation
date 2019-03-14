@@ -1,0 +1,36 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(src="javascripts/dashboard.js")
+    title okta-express-login-portal: #{title}
+  body.bg-dark
+    div.top-bar.d-flex.flex-column.flex-md-row.align-items-center.p-3.px-md-4.mb-3.bg-dark.border-bottom.box-shadow
+      h5.my-0.mr-md-auto.font-weight-normal
+        if user == undefined
+          a(href="/", title="Home") Okta Express Login Portal
+        else 
+          a(href="/dashboard", title="Home") Okta Express Login Portal
+      nav.my-2.my-md-0.mr-md-3
+        if user == undefined
+          a.p-2.text-white(href="/", title="Home") Home
+        else 
+          a.p-2.text-white(href="/dashboard", title="Home") Home
+
+        if user == undefined
+          a.p-2.text-white(href="/users/login", title="Login") Log In / Register
+        else
+          a.p-2.text-white(href="/dashboard", title="Dashboard") Dashboard
+          a.p-2.text-white(href="/users/logout", title="Logout") Logout
+    .container
+      block content
+
+    footer
+      div.center-footer.
+        Built with #[a(href="https://expressjs.com/") Express.js] Login powered by #[a(href="https://developer.okta.com/") Okta]

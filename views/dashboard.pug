@@ -1,0 +1,79 @@
+extends layout
+
+block variables
+  - var title = "Dashboard"
+
+block content
+  .row
+    nav.navbar.p-0
+      ul.navbar-nav
+        li.nav-item
+          a(href="javascript:void(0);", title="Dashboard", id="dashboard")
+            div.col-sm.text-center(style="background-color: #4384BA;")
+              .space-before-medium.
+              p.text-white.no-link-underline Dashboard
+              img(src="images/Dashboard.png" height="50" alt="Dashboard")
+              .space-after-medium.
+        li.nav-item
+          a(href="javascript:void(0);", title="Schedule", id="schedule")
+            div.col-sm.text-center(style="background-color: #4349BA;")
+              .space-before-medium.
+              p.text-white.no-link-underline Schedule
+              img(src="images/Schedule.png" height="50" alt="Schedule")
+              .space-after-medium. 
+        li.nav-item
+          a(href="javascript:void(0);", title="Controllers", id="controllers")
+            div.col-sm.text-center(style="background-color: #43BA79;")  
+              .space-before-medium.
+              p.text-white.no-link-underline Controllers
+              img(src="images/Controllers.png" height="50" alt="Controllers")
+              .space-after-medium. 
+        li.nav-item
+          a(href="javascript:void(0);", title="Water Usage", id="waterUsage")
+            div.col-sm.text-center(style="background-color: #43BAB4;")  
+              .space-before-medium.
+              p.text-white.no-link-underline Water Usage
+              img(src="images/WaterUsage.png" height="50" alt="Water Usage")
+              .space-after-medium. 
+        li.nav-item
+          a(href="javascript:void(0);", title="Settings", id="settings")
+            div.col-sm.text-center(style="background-color: #7943BA;")  
+              .space-before-medium.
+              p.text-white.no-link-underline Settings
+              img(src="images/Settings.png" height="50" alt="Settings")
+              .space-after-medium. 
+
+    .container-fluid.text-center.col-sm.m-0(style="background-color: #202126;")
+      div.no-display
+        h2.text-center.space-before-medium Dashboard
+        h4.space-after Welcome to your dashboard page, #{user.profile.firstName}.
+      div#dashboardDiv.no-display(style="display:block")
+        .row.ml-0.mr-0
+          .col.space-before-medium.m-1
+            h5.mb-0(style="background-color: black; height: 30px; border-bottom: 3px solid red;") Next Irrigation
+            .div(style="background-color: #1F4FBE; height: 150px;")
+              h4 Thursday, Mar 14 6:00AM - 8:30AM Sierra Quad
+          .col.space-before-medium.m-1
+            h5.mb-0(style="background-color: black; height: 30px; border-bottom: 3px solid red;") Water Usage
+            .div(style="background-color: #1F4FBE; height: 150px;")
+              h4 Thursday, Mar 14 6:00AM - 8:30AM Sierra Quad
+          .col.space-before-medium.m-1
+            h5.mb-0(style="background-color: black; height: 30px; border-bottom: 3px solid red;") Scheduled Today
+            .div(style="background-color: #1F4FBE; height: 150px;")
+              h4 Thursday, Mar 14 6:00AM - 8:30AM Sierra Quad
+        p
+        .row.ml-2.mr-2
+          div.col(style="background-color: #5043BA; height: 450px;")
+            h3.space-before-large Map
+          div.col(style="background-color: #4371BA; height: 450px;")
+            h3.space-before-large Calendar
+      div#scheduleDiv.no-display
+        h5 schedule
+      div#controllersDiv.no-display
+        h5 controllers
+      div#waterUsageDiv.no-display
+        h5 water usage
+      div#settingsDiv.no-display
+        h5 settings
+
+    
